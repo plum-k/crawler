@@ -2,11 +2,11 @@ from pathlib import Path
 
 node = hou.node("/obj")
 
-base_dir = Path("E:/note/houdini/node/SOP/KinFX")
+base_dir = Path("E:/note/houdini/node/ROP/Scene")
 
 file_list = [f for f in base_dir.iterdir() if f.is_file()]
 # 要被复制的节点
-base_node = hou.node("/obj/geo1")
+base_node = hou.node("/obj/ropnet1")
 
 file_list.reverse()
 i = 0
