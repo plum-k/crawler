@@ -27,7 +27,7 @@ def create_files_from_txt(txt_file):
             file_path = os.path.join(out_directory, file_name)
             with open(file_path, 'w') as new_file:
                 # 可选：在每个文件中写入一些初始内容
-                new_file.write("This is a new file: {}".format(file_name))
+                new_file.write("# {}".format(os.path.splitext(file_name)[0]))
 
             print("Created file: {}".format(file_path))
 
