@@ -15,7 +15,7 @@ def create_files_from_txt(txt_file):
     if not os.path.exists(out_directory):
         os.makedirs(out_directory)
 
-    with open(txt_file, 'r') as file:
+    with open(txt_file, 'r',encoding='utf-8') as file:
         for line in file:
             # 去除每行两边的空格和换行符
             file_name = line.strip()
@@ -25,7 +25,7 @@ def create_files_from_txt(txt_file):
 
             # 创建文件在out目录中
             file_path = os.path.join(out_directory, file_name)
-            with open(file_path, 'w') as new_file:
+            with open(file_path, 'w',encoding='utf-8') as new_file:
                 # 可选：在每个文件中写入一些初始内容
                 new_file.write("# {}".format(os.path.splitext(file_name)[0]))
 

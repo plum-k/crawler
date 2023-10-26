@@ -14,7 +14,7 @@ def create_folders_from_txt(txt_file):
     # 创建新的文件夹
     os.makedirs(out_directory)
 
-    with open(txt_file, 'r') as file:
+    with open(txt_file, 'r',encoding="utf-8") as file:
         for line in file:
             # 去除每行两边的空格和换行符
             folder_name = line.strip()

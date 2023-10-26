@@ -28,6 +28,6 @@ def extract_and_write(directory_path):
                     # os.remove(file_path)
 
 # 指定要遍历的目录路径，注意使用双反斜杠或者单正斜杠来兼容 Windows 路径格式
-target_directory = r"D:\web_code\note\Blender\建模\modifiers"
+target_directory = r"E:\note\Blender\雕刻&绘制\顶点绘制"
 
 extract_and_write(target_directory)

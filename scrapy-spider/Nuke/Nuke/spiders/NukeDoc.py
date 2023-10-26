@@ -2582,20 +2582,12 @@ class NukedocSpider(scrapy.Spider):
       name = "NukeDoc"
       allowed_domains = ["learn.foundry.com"]
       start_urls = aa
-      # start_urls = [aa[0]]
-      # start_urls = ["https://learn.foundry.com/zh-hans/nuke/content/reference_guide/image_nodes/checkerboard.html"]
       def parse(self, response):
-          print(response)
-
           div = response.xpath('//div[@class="topic-layout"]')[0].get()
           name = response.xpath('//title')[0].xpath("text()").get()
-          print(response.url.split("/"))
-          sort = response.url.split("/")[6:][0]
 
           node = {}
           node["main"] = div
           node["name"] = name
-          node["sort"] = sort
           node["url"] = response.url
-          print(node)
           yield node
